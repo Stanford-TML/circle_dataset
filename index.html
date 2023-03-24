@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CIRCLE: Capture in Rich Contextual Environments</title>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+  <h1 class="project-title">CIRCLE: Capture in Rich Contextual Environments</h1>
+  <!-- <img class="project-image" src="assets/placeholder.jpeg" alt=""> -->
+  <div id="carousel-id" class="carousel" data-interval="false" style="width: 90%; margin: 0 auto; margin-top: 40px;">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-id" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+      <li data-target="#carousel-id" data-slide-to="2" class=""></li>
+      <li data-target="#carousel-id" data-slide-to="3" class=""></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="row" style="justify-content: row;">
+            <video autoplay loop muted>
+              <source src="https://circledemos.s3.us-west-2.amazonaws.com/teaser/smpl2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <video autoplay loop muted>
+              <source src="https://circledemos.s3.us-west-2.amazonaws.com/teaser/fpov2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <video autoplay loop muted>
+              <source src="https://circledemos.s3.us-west-2.amazonaws.com/teaser/dpov2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+      </div>
+      <div class="item">
+        <div class="row" style="justify-content: row;">
+            <video autoplay loop muted>
+              <source src="https://circledemos.s3.us-west-2.amazonaws.com/teaser/smpl1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <video autoplay loop muted>
+              <source src="https://circledemos.s3.us-west-2.amazonaws.com/teaser/fpov1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <video autoplay loop muted>
+              <source src="https://circledemos.s3.us-west-2.amazonaws.com/teaser/dpov1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+      </div>
+      <div class="item">
+        <div class="row" style="justify-content: row;">
+            <video class="tall-video" autoplay loop muted>
+              <source src="https://circledemos.s3.us-west-2.amazonaws.com/teaser/smpl3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <video autoplay loop muted>
+              <source src="https://circledemos.s3.us-west-2.amazonaws.com/teaser/fpov3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <video autoplay loop muted>
+              <source src="https://circledemos.s3.us-west-2.amazonaws.com/teaser/dpov3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>    
+      </div>
+      <div class="item">
+        <div class="row" style="justify-content: row;">
+            <video class="tall-video" autoplay loop muted>
+              <source src="https://circledemos.s3.us-west-2.amazonaws.com/teaser/smpl4.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <video autoplay loop muted>
+              <source src="https://circledemos.s3.us-west-2.amazonaws.com/teaser/fpov4.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <video autoplay loop muted>
+              <source src="https://circledemos.s3.us-west-2.amazonaws.com/teaser/dpov4.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>    
+      </div>
+    </div>
+    <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+  </div>
+  <p class="caption">We introduce CIRCLE, a dataset of 3D whole body reaching motion and corresponding first person RGDB videos within a fully furnished virtual home.
+  </p>
+
+
+  <div class="authors">
+    <a href="">Joao Pedro Araujo<sup>1</sup></a>
+    <a href="">Jiaman Li<sup>1</sup></a>
+    <a href="">Karthik Vetrivel<sup>1</sup></a>
+    <a href="">Rishi Agarwal<sup>1</sup></a>
+    <a href="">Deepak Gopinath<sup>2</sup></a>
+    <a href="">Jiajun Wu<sup>1</sup></a>
+    <a href="">Alexander Clegg<sup>2</sup></a>
+    <a href="">C. Karen Liu<sup>1</sup></a>
+  </div>
+
+  <div class="affiliations">
+    <span><sup>1</sup>Stanford University</span>
+    <span><sup>2</sup>Meta AI</span>
+  </div>
+
+  <div class="project-icons">
+    <a href="">
+      <img class="icon" src="assets/file-solid.svg" alt="">
+      Paper
+    </a>
+    <!-- <a href="">
+      <img class="icon" src="assets/github.svg" alt="">
+      Code
+    </a> -->
+
+    <a href="">
+      <img class="icon" src="assets/download-solid.svg" alt="">
+      Dataset
+    </a>
+  </div>
+
+  <section>
+    <div class="abstract">
+      <p>
+        <h2 class="section-header ">Abstract</h2>
+        Synthesizing 3D human motion in a contextual, ecological environment is important for simulating realistic
+        activities people perform in the real world. However, conventional optics-based motion capture systems are not
+        suited
+        for simultaneously capturing human movements and complex scenes. The lack of rich contextual 3D human motion
+        datasets presents a roadblock to creating high-quality generative human motion models. We propose a novel motion
+        acquisition system in which the actor perceives and operates in a highly contextual virtual world while being
+        motion captured in the real world. Our system enables rapid
+        collection of high-quality human motion in highly diverse
+        scenes, without the concern of occlusion or the need for
+        physical scene construction in the real world. We present
+        CIRCLE, a dataset containing over four hours of full-body
+        reaching motion across nine scenes. We use this dataset
+        to train a model that generates human motion conditioned
+        on scene information. Leveraging our dataset, the model
+        learns to use ego-centric scene information to achieve non-trivial reaching tasks in the context of complex 3D
+        scenes.
+      </p>
+    </div>
+    <div class="teaser-images">
+      <div>
+        <img class="project-image" src="assets/teaser2.png" alt="">
+        <p>Example poses from CIRCLE captured from real human motion in a virtual environment.</p>
+      </div>
+      <!-- <div>
+        <img class="project-image" src="assets/teaser_back.png" alt="">
+        <p>hi</p>
+      </div> -->
+    </div>
+
+  </section>
+
+  <section>
+    <div class="abstract">
+      <h2 class="section-header ">CIRCLE at a Glance</h2>
+      <div class="numbers">
+        <div>
+          <h4>10</h4>
+          <p>hours of data</p>
+        </div>
+
+        <div>
+          <h4>5</h4>
+          <p>subjects</p>
+        </div>
+
+        <div>
+          <h4>9</h4>
+          <p>scenes</p>
+        </div>
+
+        <div>
+          <h4>7000+</h4>
+          <p>sequences</p>
+        </div>
+      </div>
+    </div>
+    <p class="abstract" style>After post-processing, each sequence in CIRCLE include the <a href="https://smpl-x.is.tue.mpg.de/">SMPL-X</a> parameters of a body model fit to the mocap data using <a href="https://mosh.is.tue.mpg.de/">MoSh</a>, the VR headset trajectory synchronized to the mocap skeleton,
+      egocentric RGB-D video (rendered with <a href="https://research.facebook.com/publications/habitat-a-platform-for-embodied-ai-research/">Habitat</a> and <a href="https://www.blender.org/">Blender</a>), task specific data, such as initial and goal conditions,
+      and the scene where the data are collected.</p>
+    </div>
+
+  </section>
+
+  <section>
+    <div class="abstract">
+      <h2 class="section-header ">Collection System</h2>
+      <p>
+        Our system enables collection of high-quality human motion in highly diverse scenes, without the concern of
+        occlusion or the need for physical scene construction. For the purposes of this dataset, we used the Oculus
+        Quest 2--though, our system is hardware agnostic.
+      </p>
+
+      <div class="image-grid" style="margin-top: 40px;">
+        <div class="row">
+          <h4>Real World</h4>
+          <img src="assets/collection_system/image15.png" alt="">
+          <img src="assets/collection_system/image16.png" alt="">
+        </div>
+        <div class="row">
+          <h4>Virtual World</h4>
+          <img src="assets/collection_system/image14.png" alt="">
+          <img src="assets/collection_system/image17.png" alt="">
+        </div>
+        <div class="row">
+          <h4>Egocentric View</h4>
+          <img src="assets/collection_system/image18.png" alt="">
+          <img src="assets/collection_system/image19.png" alt="">
+        </div>
+      </div>
+  </section>
+
+  <section class="section-gray">
+    <div class="abstract">
+      <h2 class="section-header">Wide Variety of Full-Body Motion Data</h2>
+      <p>
+        CIRCLE sequences range in difficulty, from easy sequences with no obstacles to sequences that require
+        considerable full-body adjustment. The videos below shows the live-capture skeleton and scene rendered within the headset while the subject completes tasks. 
+      </p>
+    </div>
+      <div style="display: flex; justify-content: center; margin-top: 40px;">
+        <div class="result-video" style="width: 70%">
+          <!-- SMPL-X -->
+          <div class="row">
+            <h4>Easy</h4>
+            <video autoplay loop  muted>
+              <source src="https://circledemos.s3.us-west-2.amazonaws.com/difficult/easy2.mov.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+            <video autoplay loop  muted>
+              <source src="https://circledemos.s3.us-west-2.amazonaws.com/difficult/easy1.mp4.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+    
+            <!-- <video autoplay loop  muted>
+              <source src="https://circledemos.s3.us-west-2.amazonaws.com/model/model/media39.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video> -->
+          </div>
+    
+    
+          <!--  -->
+          <div class="row">
+            <h4>Medium</h4>
+            <video autoplay loop  muted>
+              <source src="https://circledemos.s3.us-west-2.amazonaws.com/difficult/medium1.mov.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+            <video autoplay loop  muted>
+              <source src="https://circledemos.s3.us-west-2.amazonaws.com/difficult/medium2.mov.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+    
+            <!-- <video autoplay loop  muted>
+              <source src="https://circledemos.s3.us-west-2.amazonaws.com/model/model/media41.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video> -->
+          </div>
+
+           <!-- Ground Truth -->
+      <div class="row">
+        <h4>Hard</h4>
+        <video autoplay loop  muted>
+          <source src="https://circledemos.s3.us-west-2.amazonaws.com/difficult/hard1.mov.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+        <video autoplay loop  muted>
+          <source src="https://circledemos.s3.us-west-2.amazonaws.com/difficult/hard2.mov.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+        <!-- <video autoplay loop  muted>
+          <source src="https://circledemos.s3.us-west-2.amazonaws.com/model/model/media11.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video> -->
+      </div>
+    </div>
+
+    
+  </section>
+
+  <section>
+    <div class="abstract">
+      <h2 class="section-header">Model</h2>
+      <img style="width: 100%" src="https://circledemos.s3.us-west-2.amazonaws.com/model/model/image41.png" alt="">
+      <p style="margin-top: 20px;">Given a start pose, goal position, and 3D scene (a), we first initialize the input poses using constant local
+        joint rotation and linearly interpolated root translation (b). We extract scene features for each time step using BPS or PointNet++ from the
+        initialized poses, a fixed point set sampled from a cylinder, and scene point clouds (c). We then concatenate scene features and initialized
+        poses and feed them to a transformer-based model (d) to generate final poses (e).</p>
+      <h4 style="text-align: left; margin-top: 50px;">Model Input</h4>
+      <p>
+        We initialize the input to our model using a constant pose that linearly interpolates the start and goal wrist
+        positions. The output is the edited motion.
+      </p>
+      <div style="display: flex; justify-content: space-between">
+        <h4></h4>
+        <h4>Input</h4>
+        <h4></h4>
+        <h4>Output</h4>
+        <h4></h4>
+        <h4>Ground Truth</h4>
+        <h4></h4>
+      </div>
+      <video autoplay  loop muted style="width: 100%">
+        <source src="https://circledemos.s3.us-west-2.amazonaws.com/model/model/media30.mp4.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+
+
+      <h4 style="text-align: left; margin-top: 50px;">Model Results</h4>
+      <p>We compare our approach against two baselines, <a href="https://goal.is.tue.mpg.de/">GOAL</a> and NO-SCENE. <a href="https://goal.is.tue.mpg.de/">GOAL</a> is an MLP architecture that, given a
+        start and goal pose, autoregressively predicts the next pose in the sequence. NO-SCENE employs our same
+        architecture without scene encoding.</p>
+    </div>
+    <div style="display: flex; justify-content: center; margin-top: 40px;">
+      <div class="result-video">
+        <div class="row">
+          <!-- Our Model, BPS -->
+          <h4>Our Model (BPS)</h4>
+          <video autoplay loop  muted>
+            <source src="https://circledemos.s3.us-west-2.amazonaws.com/model/model/media32.mp4.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+
+          <video autoplay loop  muted>
+            <source src="https://circledemos.s3.us-west-2.amazonaws.com/model/model/media36.mp4.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+
+          <video autoplay loop  muted>
+            <source src="https://circledemos.s3.us-west-2.amazonaws.com/model/model/media40.mp4.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="model-gap">
+          <video>
+          </video>
+        </div>
+
+        <!-- No Scene -->
+        <div class="row">
+          <h4>No Scene    </h4>
+          <video autoplay loop  muted>
+            <source src="https://circledemos.s3.us-west-2.amazonaws.com/model/model/media31.mp4.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+          <video autoplay loop  muted>
+            <source src="https://circledemos.s3.us-west-2.amazonaws.com/model/model/media35.mp4.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+
+          <video autoplay loop  muted>
+            <source src="https://circledemos.s3.us-west-2.amazonaws.com/model/model/media39.mp4.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+
+        <!-- GOAL -->
+        <div class="row">
+          <h4>GOAL</h4>
+          <video autoplay loop  muted>
+            <source src="https://circledemos.s3.us-west-2.amazonaws.com/model/model/media33.mp4.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+          <video autoplay loop  muted>
+            <source src="https://circledemos.s3.us-west-2.amazonaws.com/model/model/media37.mp4.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+
+          <video autoplay loop  muted>
+            <source src="https://circledemos.s3.us-west-2.amazonaws.com/model/model/media41.mp4.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+
+        <!-- Ground Truth -->
+        <div class="row">
+          <h4>Ground Truth</h4>
+          <video autoplay loop  muted>
+            <source src="https://circledemos.s3.us-west-2.amazonaws.com/model/model/media5.mp4.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+          <video autoplay loop  muted>
+            <source src="https://circledemos.s3.us-west-2.amazonaws.com/model/model/media7.mp4.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+          <video autoplay loop  muted>
+            <source src="https://circledemos.s3.us-west-2.amazonaws.com/model/model/media11.mp4.webm" type="video/webm">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  </div>
+
+  
+  <!-- jQuery -->
+  <script src="//code.jquery.com/jquery.js"></script>
+  <!-- Bootstrap JavaScript -->
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
