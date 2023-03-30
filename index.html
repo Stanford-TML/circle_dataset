@@ -236,7 +236,7 @@
         considerable full-body adjustment. The videos below shows the live-capture skeleton and scene rendered within the headset while the subject completes tasks. 
       </p>
     </div>
-      <div style="display: flex; justify-content: center; margin-top: 40px;">
+      <div id="difficulty" style="display: flex; justify-content: center; margin-top: 40px;">
         <div class="result-video" style="width: 70%">
           <!-- Easy difficulty  -->
           <div class="row">
@@ -337,8 +337,6 @@
         </div>
 
         <div class="model-gap">
-          <video>
-          </video>
         </div>
 
         <!-- No Scene -->
@@ -416,20 +414,17 @@
   <script>
     // This script makes sure the carousel videos are in sync.
 
-    // Make sure no videos are playing
     const videos = document.getElementsByTagName('video');
-    for (let i = 0; i < videos.length; i++) {
-      videos[i].pause();
-      videos[i].currentTime = 0;
-    }
-    
-    // Wire the carousel videos so that when the shortest video of a
-    // row finishes, all go back to the start
-    const carouselInner = document.querySelector('.carousel-inner');
-    const rows = carouselInner.querySelectorAll('.row');
-    rows.forEach((row) => {
+
+    function processRow(row) {
+      // Get the duration of the shortest video, and add an
+      // event listener to the first video that restart all videos
+      // in this row when it is time.
       const videos = row.querySelectorAll('video');
       let shortestDuration = Infinity;
+
+      const firstVideo = videos[0];
+      const otherVideos = Array.from(videos).slice(1);
 
       videos.forEach((video) => {
         if (video.duration < shortestDuration) {
@@ -437,20 +432,58 @@
         }
       });
 
-      videos.forEach((video) => {
-        video.addEventListener('timeupdate', function() {
-          if (video.currentTime > 0.8 * shortestDuration) {
+      firstVideo.addEventListener('timeupdate', function() {
+        if (this.currentTime > 0.8 * shortestDuration) {
+          videos.forEach((video) => {
             video.currentTime = 0;
-          }
-        });
+          });
+        }
       });
-    });
-
-
-    // Play the videos
-    for (let i = 0; i < videos.length; i++) {
-      videos[i].play();
     }
+    
+    function syncVideos() {
+      // Make sure no videos are playing
+      for (let i = 0; i < videos.length; i++) {
+        videos[i].pause();
+        videos[i].currentTime = 0;
+      }
+
+      // Wire the carousel videos so that when the shortest video of a
+      // row finishes, all go back to the start
+      const carouselInner = document.querySelector('.carousel-inner');
+      const rows = carouselInner.querySelectorAll('.row');
+      rows.forEach((row) => processRow(row));
+
+      // Play the videos. The timeout seems to help...
+      setTimeout(() => {
+        for (let i = 0; i < videos.length; i++) {
+          videos[i].play();
+        }
+      }, 1000);
+    }
+
+    function syncVideosWrapper() {
+      let flag = false;
+
+      // Check if all the videos have loaded already. If not,
+      // call this function again in 1 second.
+      for (let i = 0; i < videos.length; i++) {
+        const video = videos[i];
+        if (isNaN(video.duration)) {
+          flag = true;
+        }
+      }
+
+      if (flag) {
+        setTimeout(() => {
+          syncVideosWrapper();
+        }, 1000);
+      } else {
+        syncVideos();
+      }
+    }
+
+    syncVideosWrapper();
   </script>
 </body>
 
