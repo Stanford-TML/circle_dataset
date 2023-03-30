@@ -485,6 +485,19 @@
 
     syncVideosWrapper();
   </script>
+  <script>
+    // This script trims the difficulty videos
+    const difficultyDiv = document.getElementById('difficulty');
+    const difficutlyVideos = difficultyDiv.getElementsByTagName('video');
+
+    Array.from(difficutlyVideos).forEach((video) => {
+      video.addEventListener('timeupdate', function() {
+        if (this.currentTime > 0.7 * this.duration) {
+          this.currentTime = 0;
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
