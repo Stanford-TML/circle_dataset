@@ -26,3 +26,11 @@ Use the Blender import menu to import the scene `.glb` file. To visualize the mo
 1. On the 3D viewport, press `N` to show the sidebar.
 2. Click on the `SMPL-X` separator.
 1. Click `Add Animation`. Set the format to `SMPL-X` and load the `.npz` file of the sequence you would like to inspect.
+
+### Visualizing using Habitat.
+
+We also provide a [custom habitat-sim viewer](https://github.com/Stanford-TML/circle_dataset/tree/main/src/viewer), which exemplifies how to load CIRCLE sequences into Habitat (check the [`__init__` method](https://github.com/Stanford-TML/circle_dataset/blob/main/src/viewer/circle_viewer.py#L53-L61) of `circle_viewer.py` and the [`next_pose` method](https://github.com/Stanford-TML/circle_dataset/blob/main/src/viewer/mocap_interface.py#L140-L150) in `mocap_interface.py`).
+
+## Rendering
+
+To reproduce the first person videos distributed with CIRCLE, check the [`render` folder](https://github.com/Stanford-TML/circle_dataset/tree/main/src/render).
