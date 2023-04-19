@@ -10,6 +10,7 @@ The CIRCLE data are hosted in an AWS S3 bucket. We provide the motion data separ
 * [Habitat first person videos](https://circledataset.s3.us-west-2.amazonaws.com/release/CIRCLE_habitat_videos.zip)
 * [Blender first person videos](https://circledataset.s3.us-west-2.amazonaws.com/release/CIRCLE_blender_videos.zip)
 * [Scene and subject URDF files](https://circledataset.s3.us-west-2.amazonaws.com/release/CIRCLE_assets.zip)
+    * [Scene without doors](https://circledataset.s3.us-west-2.amazonaws.com/release/102815835-no-doors.glb)
 
 If you find any issues with the dataset, please [let us know](https://github.com/Stanford-TML/circle_dataset/issues/new).
 

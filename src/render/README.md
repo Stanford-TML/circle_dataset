@@ -2,12 +2,12 @@
 
 The scripts in this folder can be used to re-render the videos that are distributed as part of CIRCLE.
 
-Note that the final CIRCLE renderings used a modified version of the scene without the doors and the windows. This version can be recreated by deleting the `openings` collection from the scene `.glb` file using Blender. The videos being distributed as part of CIRCLE were also compressed using [Handbrake](https://handbrake.fr/).
+Note that the final CIRCLE renderings used a modified version of the scene without the doors and the windows. This version can be recreated by deleting the `openings` collection from the scene `.glb` file using Blender. Alternatively, you can download it [here](https://circledataset.s3.us-west-2.amazonaws.com/release/102815835-no-doors.glb). The videos being distributed as part of CIRCLE were also compressed using [Handbrake](https://handbrake.fr/).
 
 ## Habitat render
 
 1. Make sure habitat-sim is installed and `ffmpeg` is in your path.
-2. Call `python habitat_render.py --folder [path to CIRCLE sequence folder] --urdf [path to subject URDF file] --scene-dataset [path to floorplanner.scene_dataset_config.json] --video-scene 102815835`
+2. Call `python habitat_render.py --folder [path to CIRCLE sequence folder] --urdf [path to subject URDF file] --scene-dataset [path to floorplanner.scene_dataset_config.json] --video-scene 102815835` (or `--video-scene 102815835-no-doors`)
 
 ## Blender render
 
