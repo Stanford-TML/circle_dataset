@@ -1,0 +1,6 @@
+src/data/CIRCLE_assets/*
+src/data/CIRCLE_movement/*
+
+.vscode
+venv/
+__pycache__/

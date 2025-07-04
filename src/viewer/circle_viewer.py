@@ -183,8 +183,8 @@ class MocapInteractiveViewer(HabitatSimInteractiveViewer):
         """
 
         key = event.key
-        pressed = Application.KeyEvent.Key
-        mod = Application.InputEvent.Modifier
+        pressed = Application.Key
+        mod = Application.Modifier
 
         shift_pressed = bool(event.modifiers & mod.SHIFT)
 
@@ -357,12 +357,12 @@ class MocapInteractiveViewer(HabitatSimInteractiveViewer):
         # first person agent
         camera_sensor_spec = habitat_sim.CameraSensorSpec()
         camera_sensor_spec.sensor_type = habitat_sim.SensorType.COLOR
-        camera_sensor_spec.resolution = [
-            self.sim_settings["height"],
-            self.sim_settings["width"],
-        ]
-        camera_sensor_spec.position = np.array([0, 0, 0])
-        camera_sensor_spec.orientation = np.array([0, 0, 0])
+        camera_sensor_spec.resolution = mn.Vector2i(
+            int(self.sim_settings["width"]),
+            int(self.sim_settings["height"]),
+        )
+        camera_sensor_spec.position = mn.Vector3(0, 0, 0)
+        camera_sensor_spec.orientation = mn.Vector3(0, 0, 0)
         camera_sensor_spec.uuid = "fpov_sensor"
 
         agent_config = habitat_sim.agent.AgentConfiguration(
