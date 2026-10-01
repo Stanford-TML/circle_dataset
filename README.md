@@ -2,15 +2,19 @@
 
 This repo hosts the website for CIRCLE dataset.
 
+## UPDATE (10-01-2026):
+
+The CIRCLE assets and movement data files are now hosted on a different platform with a lower storage capacity. As such, first person videos are no longer provided. They can be generated again using an adapted version of the provided code.
+
 ## Download
 
 The CIRCLE data are hosted in an AWS S3 bucket. We provide the motion data separate from the first person videos. Please use the following links to download:
 
-* [Motion (SMPL-X and BVH) and headset trajectories](https://circledataset.s3.us-west-2.amazonaws.com/release/CIRCLE_movement.zip)
-* [Habitat first person videos](https://circledataset.s3.us-west-2.amazonaws.com/release/CIRCLE_habitat_videos.zip)
-* [Blender first person videos](https://circledataset.s3.us-west-2.amazonaws.com/release/CIRCLE_blender_videos.zip)
-* [Scene and subject URDF files](https://circledataset.s3.us-west-2.amazonaws.com/release/CIRCLE_assets.zip)
-    * [Scene without doors](https://circledataset.s3.us-west-2.amazonaws.com/release/102815835-no-doors.glb)
+* [Motion (SMPL-X and BVH) and headset trajectories](https://drive.google.com/file/d/1Zq3u8bHawtxrFeKgpiOU7bm5yJBemHWW/view?usp=sharing)
+* ~Habitat first person videos~
+* ~Blender first person videos~
+* [Scene and subject URDF files](https://drive.google.com/file/d/1NACAR1l90x6v8ibJCSPR7EFUGNdFY0SK/view?usp=sharing)
+    * [Scene without doors](https://drive.google.com/file/d/1sOJycxrcy_VUEy-PT5WRyX7Nzg_XbSZI/view?usp=sharing)
 
 If you find any issues with the dataset, please [let us know](https://github.com/Stanford-TML/circle_dataset/issues/new).
 
