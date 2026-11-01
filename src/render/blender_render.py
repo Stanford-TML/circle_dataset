@@ -161,21 +161,23 @@ if __name__ == "__main__":
     else:
         blender = "blender"
     subprocess.call(
-        " ".join(
-            [
-                blender,
-                "-P",
-                utils_path.as_posix(),
-                "-b",
-                "--",
-                f"--sequence-folder {sequence_folder.as_posix()}",
-                f"--mesh-folder {mesh_folder.as_posix()}",
-                f"--scene {args.scene}",
-                f"--out-folder {img_folder.as_posix()}",
-                f"--stage {args.stage}",
-            ]
-        ),
-        shell=True,
+        [
+            blender,
+            "-P",
+            utils_path.as_posix(),
+            "-b",
+            "--",
+            "--sequence-folder",
+            sequence_folder.as_posix(),
+            "--mesh-folder",
+            mesh_folder.as_posix(),
+            "--scene",
+            str(args.scene),
+            "--out-folder",
+            img_folder.as_posix(),
+            "--stage",
+            str(args.stage),
+        ]
     )
 
     out_vid_path = out_folder_path.joinpath(
